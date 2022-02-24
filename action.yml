@@ -1,6 +1,6 @@
 name: 'set-version-assemblyinfo'
 description: 'Set the version in all the AssemblyInfo.cs or AssemblyInfo.vb files in any subdirectory.'
-author: 'dannevesdantas'
+author: 'rocklan'
 branding:
   color: purple
   icon: edit-3
@@ -16,6 +16,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: '${{ github.action_path }}/SetVersion.ps1 ${{ inputs.version }}'
+    - run: |
+        cd ${{ inputs.path }} 
+        ${{ github.action_path }}/SetVersion.ps1 ${{ inputs.version }}
       shell: powershell
       
