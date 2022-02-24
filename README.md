@@ -5,7 +5,7 @@ Set the version in all the AssemblyInfo.cs or AssemblyInfo.vb files in any subdi
 
 ```yml
 - name: Set version on AssemblyInfo.cs
-  uses: dannevesdantas/set-version-assemblyinfo-win@v1.0.0
+  uses: rocklan/set-version-assemblyinfo@v.1.0.0
   with:
     version: '3.2.0'
 ```
@@ -15,7 +15,7 @@ You can specify an optional folder path to search for AssemblyInfo.cs/.vb files.
 
 ```yml
 - name: Set version on AssemblyInfo.cs
-  uses: dannevesdantas/set-version-assemblyinfo-win@v1.0.0
+  uses: rocklan/set-version-assemblyinfo@v.1.0.0
   with:
     version: '3.2.0'
     path: '${{ github.workspace }}/MyProject/App'
